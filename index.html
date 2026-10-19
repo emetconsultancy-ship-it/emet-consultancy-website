@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,149 +7,1132 @@
   <meta name="description" content="Emet Consultancy Service Co.,Ltd. — practical business, management, and professional consultancy services.">
   <meta name="theme-color" content="#102b46">
   <title>Emet Consultancy Service Co.,Ltd. | Practical Solutions. Lasting Growth.</title>
+
   <style>
-    :root{--navy:#102b46;--blue:#1d527a;--teal:#22a6a1;--gold:#e6b45c;--ink:#172b3b;--muted:#647587;--pale:#f3f7fa;--white:#fff;--line:#dce5ec;--shadow:0 18px 45px rgba(16,43,70,.11)}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);line-height:1.65} a{color:inherit;text-decoration:none} button,input,textarea,select{font:inherit}
-    .container{width:min(1120px,calc(100% - 40px));margin:auto}.topbar{background:#0a2035;color:#d9e5ef;font-size:13px;padding:8px 0}.topbar .container{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(220,229,236,.8)}.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;min-width:0}.brandmark{width:46px;height:46px;border-radius:13px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800;font-size:17px;letter-spacing:-1px;box-shadow:0 6px 16px #102b4622}.brandname{font-weight:800;line-height:1.2;color:var(--navy);font-size:15px}.brandname small{display:block;font-size:11px;font-weight:600;color:var(--muted);letter-spacing:1.6px;margin-top:5px}.navlinks{display:flex;align-items:center;gap:27px;font-size:14px;font-weight:650;color:#41566a}.navlinks a:hover{color:var(--teal)}.navcta,.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:8px;padding:12px 19px;font-weight:750;cursor:pointer;transition:.2s}.navcta,.btn-primary{background:var(--teal);color:#fff}.navcta:hover,.btn-primary:hover{background:#168b87;transform:translateY(-1px)}.menu-btn{display:none;background:none;border:0;color:var(--navy);font-size:27px}
-    .hero{position:relative;overflow:hidden;background:linear-gradient(115deg,#0b2239 0%,#123b5b 62%,#17616c 100%);color:#fff;padding:92px 0 88px}.hero:before,.hero:after{content:"";position:absolute;border:1px solid #ffffff18;border-radius:50%;pointer-events:none}.hero:before{width:600px;height:600px;right:-100px;top:-240px}.hero:after{width:420px;height:420px;right:-10px;top:-150px}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr .75fr;gap:65px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:10px;color:#8fe2dc;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.eyebrow:before{content:"";width:28px;height:2px;background:var(--gold)}h1{font-size:clamp(38px,5.2vw,64px);line-height:1.08;letter-spacing:-2.4px;margin:20px 0 22px;max-width:720px}.hero p{font-size:18px;color:#d4e1eb;max-width:600px;margin:0 0 30px}.hero-actions{display:flex;gap:13px;flex-wrap:wrap}.btn-outline{border:1px solid #ffffff66;color:#fff;background:#ffffff0a}.btn-outline:hover{background:#ffffff18}.hero-note{display:flex;align-items:center;gap:12px;margin-top:28px;color:#d4e1eb;font-size:13px}.note-dot{width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px #e6b45c20}.hero-card{padding:30px;background:#ffffff0e;border:1px solid #ffffff25;border-radius:18px;backdrop-filter:blur(5px);box-shadow:0 25px 60px #06182a35}.hero-card .mini-label{color:#8fe2dc;text-transform:uppercase;letter-spacing:1.8px;font-size:11px;font-weight:800}.hero-card h2{font-size:25px;line-height:1.25;margin:12px 0 23px}.promise{display:flex;gap:14px;padding:15px 0;border-top:1px solid #ffffff20}.promise-icon{width:34px;height:34px;flex:0 0 34px;display:grid;place-items:center;background:#ffffff12;border-radius:9px;color:#8fe2dc;font-size:17px}.promise strong{display:block;font-size:14px}.promise span{display:block;font-size:12px;color:#c1d2df;margin-top:3px}
-    section{padding:82px 0}.section-head{max-width:690px;margin-bottom:38px}.section-kicker{font-size:12px;text-transform:uppercase;letter-spacing:2px;font-weight:800;color:#168d89}.section-head h2{font-size:clamp(29px,3.6vw,42px);line-height:1.15;letter-spacing:-1.2px;color:var(--navy);margin:12px 0 14px}.section-head p{color:var(--muted);margin:0;font-size:16px}.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:65px;align-items:center}.about-visual{min-height:355px;border-radius:18px;background:linear-gradient(145deg,#e7f1f4,#d5e7e8);position:relative;overflow:hidden;padding:32px;display:flex;align-items:flex-end}.about-visual:before{content:"";position:absolute;width:290px;height:290px;border:1px solid #1d527a25;border-radius:50%;top:-85px;right:-65px;box-shadow:0 0 0 32px #1d527a08,0 0 0 64px #1d527a06}.visual-panel{position:relative;background:#fff;padding:23px;border-radius:13px;width:100%;box-shadow:var(--shadow)}.visual-panel .big{font-size:31px;font-weight:850;color:var(--navy);line-height:1.15}.visual-panel p{color:var(--muted);font-size:13px;margin:8px 0 0}.about-copy h3{font-size:25px;line-height:1.3;color:var(--navy);margin:0 0 15px}.about-copy p{color:var(--muted)}.checklist{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:12px}.checklist li{display:flex;gap:11px;align-items:flex-start;font-weight:650;font-size:14px}.check{color:var(--teal);font-weight:900}
-    .services{background:var(--pale)}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.service-card{background:#fff;border:1px solid #e5edf2;border-radius:14px;padding:27px 24px;transition:.2s}.service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#c8e8e5}.service-icon{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:#e4f5f3;color:#147e7a;font-size:23px;margin-bottom:22px}.service-card h3{font-size:18px;color:var(--navy);margin:0 0 10px}.service-card p{font-size:14px;color:var(--muted);margin:0}.service-card a{display:inline-block;color:#138985;font-weight:750;font-size:13px;margin-top:19px}
-    .approach-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:25px}.step{border-top:2px solid var(--line);padding-top:20px}.step-num{font-size:12px;letter-spacing:1.5px;color:var(--teal);font-weight:850}.step h3{color:var(--navy);font-size:18px;margin:10px 0 8px}.step p{font-size:14px;color:var(--muted);margin:0}
-    .cta-band{padding:0 0 82px}.cta-inner{background:linear-gradient(110deg,var(--navy),#1b5b6c);border-radius:18px;padding:43px 48px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:25px}.cta-inner h2{font-size:clamp(25px,3vw,34px);line-height:1.2;margin:0 0 9px;letter-spacing:-.8px}.cta-inner p{color:#d0e1e9;margin:0}.cta-inner .btn{white-space:nowrap}
-    .contact{background:var(--pale)}.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}.contact-info h3{font-size:25px;color:var(--navy);margin:0 0 12px}.contact-info>p{color:var(--muted)}.contact-item{display:flex;gap:13px;margin-top:24px}.contact-item .ci{width:39px;height:39px;flex:0 0 39px;background:#e0f2f0;border-radius:10px;display:grid;place-items:center;color:#147e7a}.contact-item strong{display:block;font-size:14px;color:var(--navy)}.contact-item span,.contact-item a{font-size:14px;color:var(--muted);overflow-wrap:anywhere}.contact-form{background:#fff;border:1px solid #e4ebf0;border-radius:15px;padding:30px;box-shadow:0 10px 30px #102b4608}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{margin-bottom:17px}.field label{display:block;font-size:13px;font-weight:750;color:var(--navy);margin-bottom:7px}.field input,.field select,.field textarea{width:100%;border:1px solid #d9e3e9;border-radius:8px;padding:12px 13px;background:#fff;color:var(--ink);outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px #22a6a11b}.field textarea{min-height:120px;resize:vertical}.form-help{font-size:12px;color:var(--muted);margin:12px 0 0}
-    footer{background:#091e31;color:#b7c7d4;padding:30px 0}.footer-row{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-brand{color:#fff;font-weight:800}.footer-links{display:flex;gap:20px;font-size:13px}.copyright{font-size:12px;color:#8ea3b4}
-    @media(max-width:850px){.navlinks{gap:15px}.hero-grid{grid-template-columns:1fr;gap:38px}.hero-card{max-width:600px}.about-grid,.contact-grid{grid-template-columns:1fr;gap:35px}.service-grid{grid-template-columns:repeat(2,1fr)}.approach-grid{grid-template-columns:repeat(2,1fr)}.cta-inner{padding:34px;align-items:flex-start;flex-direction:column}}
-    @media(max-width:650px){.container{width:min(100% - 30px,1120px)}.topbar .container{justify-content:center;text-align:center}.nav{min-height:70px}.brandmark{width:40px;height:40px}.brandname{font-size:13px}.brandname small{font-size:9px}.menu-btn{display:block}.navlinks{display:none;position:absolute;top:70px;left:0;right:0;background:#fff;padding:18px 22px 24px;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}.navlinks.open{display:flex}.navlinks a{padding:12px 0;border-bottom:1px solid #edf1f4}.navlinks .navcta{margin-top:14px}.hero{padding:65px 0}.hero p{font-size:16px}h1{letter-spacing:-1.5px}.hero-card{padding:23px}section{padding:63px 0}.service-grid,.approach-grid,.form-row{grid-template-columns:1fr}.about-visual{min-height:285px;padding:20px}.cta-band{padding-bottom:63px}.cta-inner{padding:27px 23px}.contact-form{padding:22px}.footer-row{flex-direction:column;align-items:flex-start}}
+    :root {
+      --navy: #102b46;
+      --blue: #1d527a;
+      --teal: #22a6a1;
+      --gold: #e6b45c;
+      --ink: #172b3b;
+      --muted: #647587;
+      --pale: #f3f7fa;
+      --white: #fff;
+      --line: #dce5ec;
+      --shadow: 0 18px 45px rgba(16,43,70,.11);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      line-height: 1.65;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    button, input, textarea, select { font: inherit; }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    .topbar {
+      background: #0a2035;
+      color: #d9e5ef;
+      font-size: 13px;
+      padding: 8px 0;
+    }
+
+    .topbar .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(220,229,236,.8);
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    /* Company logo: fixed size on desktop and mobile */
+    .brand-logo {
+      display: block;
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .brandname {
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--navy);
+      font-size: 15px;
+    }
+
+    .brandname small {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 1.6px;
+      margin-top: 5px;
+    }
+
+    .navlinks {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      font-size: 14px;
+      font-weight: 650;
+      color: #41566a;
+    }
+
+    .navlinks a:hover { color: var(--teal); }
+
+    .navcta, .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      border-radius: 8px;
+      padding: 12px 19px;
+      font-weight: 750;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .navcta, .btn-primary {
+      background: var(--teal);
+      color: #fff;
+    }
+
+    .navcta:hover, .btn-primary:hover {
+      background: #168b87;
+      transform: translateY(-1px);
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: 0;
+      color: var(--navy);
+      font-size: 27px;
+      cursor: pointer;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(115deg, #0b2239 0%, #123b5b 62%, #17616c 100%);
+      color: #fff;
+      padding: 92px 0 88px;
+    }
+
+    .hero:before, .hero:after {
+      content: "";
+      position: absolute;
+      border: 1px solid #ffffff18;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero:before {
+      width: 600px;
+      height: 600px;
+      right: -100px;
+      top: -240px;
+    }
+
+    .hero:after {
+      width: 420px;
+      height: 420px;
+      right: -10px;
+      top: -150px;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #8fe2dc;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow:before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    h1 {
+      font-size: clamp(38px, 5.2vw, 64px);
+      line-height: 1.08;
+      letter-spacing: -2.4px;
+      margin: 20px 0 22px;
+      max-width: 720px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #d4e1eb;
+      max-width: 600px;
+      margin: 0 0 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
+    }
+
+    .btn-outline {
+      border: 1px solid #ffffff66;
+      color: #fff;
+      background: #ffffff0a;
+    }
+
+    .btn-outline:hover { background: #ffffff18; }
+
+    .hero-note {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 28px;
+      color: #d4e1eb;
+      font-size: 13px;
+    }
+
+    .note-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 5px #e6b45c20;
+      flex-shrink: 0;
+    }
+
+    .hero-card {
+      padding: 30px;
+      background: #ffffff0e;
+      border: 1px solid #ffffff25;
+      border-radius: 18px;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 25px 60px #06182a35;
+    }
+
+    .hero-card .mini-label {
+      color: #8fe2dc;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .hero-card h2 {
+      font-size: 25px;
+      line-height: 1.25;
+      margin: 12px 0 23px;
+    }
+
+    .promise {
+      display: flex;
+      gap: 14px;
+      padding: 15px 0;
+      border-top: 1px solid #ffffff20;
+    }
+
+    .promise-icon {
+      width: 34px;
+      height: 34px;
+      flex: 0 0 34px;
+      display: grid;
+      place-items: center;
+      background: #ffffff12;
+      border-radius: 9px;
+      color: #8fe2dc;
+      font-size: 17px;
+    }
+
+    .promise strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    .promise span {
+      display: block;
+      font-size: 12px;
+      color: #c1d2df;
+      margin-top: 3px;
+    }
+
+    section { padding: 82px 0; }
+
+    .section-head {
+      max-width: 690px;
+      margin-bottom: 38px;
+    }
+
+    .section-kicker {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 800;
+      color: #168d89;
+    }
+
+    .section-head h2 {
+      font-size: clamp(29px, 3.6vw, 42px);
+      line-height: 1.15;
+      letter-spacing: -1.2px;
+      color: var(--navy);
+      margin: 12px 0 14px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .about-visual {
+      min-height: 355px;
+      border-radius: 18px;
+      background: linear-gradient(145deg, #e7f1f4, #d5e7e8);
+      position: relative;
+      overflow: hidden;
+      padding: 32px;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .about-visual:before {
+      content: "";
+      position: absolute;
+      width: 290px;
+      height: 290px;
+      border: 1px solid #1d527a25;
+      border-radius: 50%;
+      top: -85px;
+      right: -65px;
+      box-shadow: 0 0 0 32px #1d527a08, 0 0 0 64px #1d527a06;
+    }
+
+    .visual-panel {
+      position: relative;
+      background: #fff;
+      padding: 23px;
+      border-radius: 13px;
+      width: 100%;
+      box-shadow: var(--shadow);
+    }
+
+    .visual-panel .big {
+      font-size: 31px;
+      font-weight: 850;
+      color: var(--navy);
+      line-height: 1.15;
+    }
+
+    .visual-panel p {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 8px 0 0;
+    }
+
+    .about-copy h3 {
+      font-size: 25px;
+      line-height: 1.3;
+      color: var(--navy);
+      margin: 0 0 15px;
+    }
+
+    .about-copy p { color: var(--muted); }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .checklist li {
+      display: flex;
+      gap: 11px;
+      align-items: flex-start;
+      font-weight: 650;
+      font-size: 14px;
+    }
+
+    .check { color: var(--teal); font-weight: 900; }
+
+    .services { background: var(--pale); }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      background: #fff;
+      border: 1px solid #e5edf2;
+      border-radius: 14px;
+      padding: 27px 24px;
+      transition: .2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+      border-color: #c8e8e5;
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: #e4f5f3;
+      color: #147e7a;
+      font-size: 23px;
+      margin-bottom: 22px;
+    }
+
+    .service-card h3 {
+      font-size: 18px;
+      color: var(--navy);
+      margin: 0 0 10px;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .service-card a {
+      display: inline-block;
+      color: #138985;
+      font-weight: 750;
+      font-size: 13px;
+      margin-top: 19px;
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .step {
+      border-top: 2px solid var(--line);
+      padding-top: 20px;
+    }
+
+    .step-num {
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      color: var(--teal);
+      font-weight: 850;
+    }
+
+    .step h3 {
+      color: var(--navy);
+      font-size: 18px;
+      margin: 10px 0 8px;
+    }
+
+    .step p {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .cta-band { padding: 0 0 82px; }
+
+    .cta-inner {
+      background: linear-gradient(110deg, var(--navy), #1b5b6c);
+      border-radius: 18px;
+      padding: 43px 48px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .cta-inner h2 {
+      font-size: clamp(25px, 3vw, 34px);
+      line-height: 1.2;
+      margin: 0 0 9px;
+      letter-spacing: -.8px;
+    }
+
+    .cta-inner p { color: #d0e1e9; margin: 0; }
+
+    .cta-inner .btn { white-space: nowrap; }
+
+    .contact { background: var(--pale); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 60px;
+    }
+
+    .contact-info h3 {
+      font-size: 25px;
+      color: var(--navy);
+      margin: 0 0 12px;
+    }
+
+    .contact-info > p { color: var(--muted); }
+
+    .contact-item {
+      display: flex;
+      gap: 13px;
+      margin-top: 24px;
+    }
+
+    .contact-item .ci {
+      width: 39px;
+      height: 39px;
+      flex: 0 0 39px;
+      background: #e0f2f0;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      color: #147e7a;
+    }
+
+    .contact-item strong {
+      display: block;
+      font-size: 14px;
+      color: var(--navy);
+    }
+
+    .contact-item span, .contact-item a {
+      font-size: 14px;
+      color: var(--muted);
+      overflow-wrap: anywhere;
+    }
+
+    .contact-form {
+      background: #fff;
+      border: 1px solid #e4ebf0;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 10px 30px #102b4608;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .field { margin-bottom: 17px; }
+
+    .field label {
+      display: block;
+      font-size: 13px;
+      font-weight: 750;
+      color: var(--navy);
+      margin-bottom: 7px;
+    }
+
+    .field input, .field select, .field textarea {
+      width: 100%;
+      border: 1px solid #d9e3e9;
+      border-radius: 8px;
+      padding: 12px 13px;
+      background: #fff;
+      color: var(--ink);
+      outline: none;
+    }
+
+    .field input:focus, .field select:focus, .field textarea:focus {
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px #22a6a11b;
+    }
+
+    .field textarea { min-height: 120px; resize: vertical; }
+
+    .form-help {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 12px 0 0;
+    }
+
+    footer {
+      background: #091e31;
+      color: #b7c7d4;
+      padding: 30px 0;
+    }
+
+    .footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand { color: #fff; font-weight: 800; }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      font-size: 13px;
+    }
+
+    .copyright { font-size: 12px; color: #8ea3b4; }
+
+    @media (max-width: 850px) {
+      .navlinks { gap: 15px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 38px; }
+      .hero-card { max-width: 600px; }
+      .about-grid, .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+      .service-grid { grid-template-columns: repeat(2, 1fr); }
+      .approach-grid { grid-template-columns: repeat(2, 1fr); }
+      .cta-inner {
+        padding: 34px;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .container { width: min(100% - 30px, 1120px); }
+
+      .topbar .container {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .nav { min-height: 70px; }
+
+      /* Keep the logo readable on small screens */
+      .brand { gap: 9px; }
+      .brand-logo { width: 44px; height: 44px; }
+      .brandname { font-size: 13px; }
+      .brandname small {
+        font-size: 9px;
+        letter-spacing: 1.2px;
+      }
+
+      .menu-btn { display: block; }
+
+      .navlinks {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        padding: 18px 22px 24px;
+        border-bottom: 1px solid var(--line);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .navlinks.open { display: flex; }
+
+      .navlinks a {
+        padding: 12px 0;
+        border-bottom: 1px solid #edf1f4;
+      }
+
+      .navlinks .navcta { margin-top: 14px; }
+
+      .hero { padding: 65px 0; }
+      .hero p { font-size: 16px; }
+      h1 { letter-spacing: -1.5px; }
+      .hero-card { padding: 23px; }
+      section { padding: 63px 0; }
+
+      .service-grid, .approach-grid, .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .about-visual { min-height: 285px; padding: 20px; }
+      .cta-band { padding-bottom: 63px; }
+      .cta-inner { padding: 27px 23px; }
+      .contact-form { padding: 22px; }
+
+      .footer-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <div class="topbar"><div class="container"><span>Professional guidance. Practical results.</span><span>Emet Consultancy Service Co.,Ltd.</span></div></div>
+  <div class="topbar">
+    <div class="container">
+      <span>Professional guidance. Practical results.</span>
+      <span>Emet Consultancy Service Co.,Ltd.</span>
+    </div>
+  </div>
+
   <header>
     <div class="container nav">
       <a class="brand" href="#home" aria-label="Emet Consultancy home">
-        
-<img
-  class="brand-logo"
-  src="22%20-%20Copy.jpg"
-  alt="Emet Consultancy Service Co.,Ltd. logo"
->
-<span class="brandname">EMET CONSULTANCY<small>SERVICE CO.,LTD.</small></span>
-
+        <img
+          class="brand-logo"
+          src="22%20-%20Copy.jpg"
+          alt="Emet Consultancy Service Co.,Ltd. logo"
+        >
+        <span class="brandname">
+          EMET CONSULTANCY
+          <small>SERVICE CO.,LTD.</small>
+        </span>
       </a>
-      <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="navLinks"
+        type="button"
+      >☰</button>
+
       <nav class="navlinks" id="navLinks" aria-label="Main navigation">
-        <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#approach">Our Approach</a><a href="#contact" class="navcta">Contact Us</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#approach">Our Approach</a>
+        <a href="#contact" class="navcta">Contact Us</a>
       </nav>
     </div>
   </header>
+
   <main>
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div>
           <div class="eyebrow">Your partner in progress</div>
           <h1>Practical solutions.<br>Lasting growth.</h1>
-          <p>Emet Consultancy Service Co.,Ltd. helps organizations move forward with clear advice, thoughtful planning, and professional support tailored to their goals.</p>
-          <div class="hero-actions"><a class="btn btn-primary" href="#contact">Discuss Your Needs&nbsp; →</a><a class="btn btn-outline" href="#services">Explore Our Services</a></div>
-          <div class="hero-note"><span class="note-dot"></span> A collaborative approach built around your objectives</div>
+          <p>
+            Emet Consultancy Service Co.,Ltd. helps organizations move
+            forward with clear advice, thoughtful planning, and professional
+            support tailored to their goals.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Discuss Your Needs&nbsp; →</a>
+            <a class="btn btn-outline" href="#services">Explore Our Services</a>
+          </div>
+
+          <div class="hero-note">
+            <span class="note-dot"></span>
+            A collaborative approach built around your objectives
+          </div>
         </div>
+
         <aside class="hero-card">
           <div class="mini-label">How we help</div>
           <h2>Turn complex challenges into clear next steps.</h2>
-          <div class="promise"><span class="promise-icon">◎</span><div><strong>Understand your goals</strong><span>We start by listening to your needs and priorities.</span></div></div>
-          <div class="promise"><span class="promise-icon">↗</span><div><strong>Build a practical plan</strong><span>Clear recommendations designed for real-world use.</span></div></div>
-          <div class="promise"><span class="promise-icon">✓</span><div><strong>Move forward with confidence</strong><span>Professional support as you take the next step.</span></div></div>
+
+          <div class="promise">
+            <span class="promise-icon">◎</span>
+            <div>
+              <strong>Understand your goals</strong>
+              <span>We start by listening to your needs and priorities.</span>
+            </div>
+          </div>
+
+          <div class="promise">
+            <span class="promise-icon">↗</span>
+            <div>
+              <strong>Build a practical plan</strong>
+              <span>Clear recommendations designed for real-world use.</span>
+            </div>
+          </div>
+
+          <div class="promise">
+            <span class="promise-icon">✓</span>
+            <div>
+              <strong>Move forward with confidence</strong>
+              <span>Professional support as you take the next step.</span>
+            </div>
+          </div>
         </aside>
       </div>
     </section>
 
     <section id="about">
       <div class="container about-grid">
-        <div class="about-visual"><div class="visual-panel"><div class="big">Clarity. Capability. Confidence.</div><p>Thoughtful consultancy for better-informed decisions and sustainable progress.</p></div></div>
+        <div class="about-visual">
+          <div class="visual-panel">
+            <div class="big">Clarity. Capability. Confidence.</div>
+            <p>
+              Thoughtful consultancy for better-informed decisions and
+              sustainable progress.
+            </p>
+          </div>
+        </div>
+
         <div class="about-copy">
           <div class="section-kicker">About Emet Consultancy</div>
           <h3>Professional support that starts with understanding your business.</h3>
-          <p>Every organization has its own goals, challenges, and opportunities. We take a collaborative, practical approach to help you assess your needs, identify priorities, and plan the way forward.</p>
-          <p>Our focus is on clear communication, dependable service, and recommendations that are relevant to your situation.</p>
-          <ul class="checklist"><li><span class="check">✓</span> Solutions shaped around your objectives</li><li><span class="check">✓</span> Clear communication and professional service</li><li><span class="check">✓</span> A practical, partnership-led working style</li></ul>
+          <p>
+            Every organization has its own goals, challenges, and opportunities.
+            We take a collaborative, practical approach to help you assess your
+            needs, identify priorities, and plan the way forward.
+          </p>
+          <p>
+            Our focus is on clear communication, dependable service, and
+            recommendations that are relevant to your situation.
+          </p>
+
+          <ul class="checklist">
+            <li><span class="check">✓</span> Solutions shaped around your objectives</li>
+            <li><span class="check">✓</span> Clear communication and professional service</li>
+            <li><span class="check">✓</span> A practical, partnership-led working style</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <section class="services" id="services">
       <div class="container">
-        <div class="section-head"><div class="section-kicker">What we do</div><h2>Services designed around your needs</h2><p>Flexible consultancy support to help you plan, improve, and make progress. The service areas below can be customized to match your company's actual offerings.</p></div>
+        <div class="section-head">
+          <div class="section-kicker">What we do</div>
+          <h2>Services designed around your needs</h2>
+          <p>
+            Flexible consultancy support to help you plan, improve, and make
+            progress. The service areas below can be customized to match your
+            company's actual offerings.
+          </p>
+        </div>
+
         <div class="service-grid">
-          <article class="service-card"><div class="service-icon">⌘</div><h3>Business Consultancy</h3><p>Practical guidance to assess challenges, clarify priorities, and identify opportunities for improvement.</p><a href="#contact">Discuss this service →</a></article>
-          <article class="service-card"><div class="service-icon">▤</div><h3>Business Planning</h3><p>Support with planning, goal setting, organizing next steps, and developing a clearer path forward.</p><a href="#contact">Discuss this service →</a></article>
-          <article class="service-card"><div class="service-icon">◫</div><h3>Management Support</h3><p>Help improve coordination, review processes, and support more informed day-to-day decisions.</p><a href="#contact">Discuss this service →</a></article>
-          <article class="service-card"><div class="service-icon">↗</div><h3>Project Coordination</h3><p>Structured support to organize activities, align stakeholders, and keep work moving toward agreed goals.</p><a href="#contact">Discuss this service →</a></article>
-          <article class="service-card"><div class="service-icon">◎</div><h3>Research & Analysis</h3><p>Organize information, understand options, and turn findings into useful insights for decision-making.</p><a href="#contact">Discuss this service →</a></article>
-          <article class="service-card"><div class="service-icon">✦</div><h3>Tailored Consultancy</h3><p>Have a specific challenge? Let's discuss the support that best fits your organization's needs.</p><a href="#contact">Discuss this service →</a></article>
+          <article class="service-card">
+            <div class="service-icon">⌘</div>
+            <h3>Business Consultancy</h3>
+            <p>Practical guidance to assess challenges, clarify priorities, and identify opportunities for improvement.</p>
+            <a href="#contact">Discuss this service →</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">▤</div>
+            <h3>Business Planning</h3>
+            <p>Support with planning, goal setting, organizing next steps, and developing a clearer path forward.</p>
+            <a href="#contact">Discuss this service →</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">◫</div>
+            <h3>Management Support</h3>
+            <p>Help improve coordination, review processes, and support more informed day-to-day decisions.</p>
+            <a href="#contact">Discuss this service →</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">↗</div>
+            <h3>Project Coordination</h3>
+            <p>Structured support to organize activities, align stakeholders, and keep work moving toward agreed goals.</p>
+            <a href="#contact">Discuss this service →</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">◎</div>
+            <h3>Research &amp; Analysis</h3>
+            <p>Organize information, understand options, and turn findings into useful insights for decision-making.</p>
+            <a href="#contact">Discuss this service →</a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">✦</div>
+            <h3>Tailored Consultancy</h3>
+            <p>Have a specific challenge? Let's discuss the support that best fits your organization's needs.</p>
+            <a href="#contact">Discuss this service →</a>
+          </article>
         </div>
       </div>
     </section>
 
     <section id="approach">
       <div class="container">
-        <div class="section-head"><div class="section-kicker">Our approach</div><h2>Simple steps. Clear direction.</h2><p>A straightforward process designed to keep the work focused, collaborative, and useful.</p></div>
+        <div class="section-head">
+          <div class="section-kicker">Our approach</div>
+          <h2>Simple steps. Clear direction.</h2>
+          <p>
+            A straightforward process designed to keep the work focused,
+            collaborative, and useful.
+          </p>
+        </div>
+
         <div class="approach-grid">
-          <div class="step"><div class="step-num">01 / LISTEN</div><h3>Understand</h3><p>We learn about your goals, context, and current challenges.</p></div>
-          <div class="step"><div class="step-num">02 / ASSESS</div><h3>Explore</h3><p>We review the situation and identify the key priorities and options.</p></div>
-          <div class="step"><div class="step-num">03 / PLAN</div><h3>Recommend</h3><p>We outline practical next steps aligned with your objectives.</p></div>
-          <div class="step"><div class="step-num">04 / PROGRESS</div><h3>Support</h3><p>We help you move ahead with clarity and purposeful action.</p></div>
+          <div class="step">
+            <div class="step-num">01 / LISTEN</div>
+            <h3>Understand</h3>
+            <p>We learn about your goals, context, and current challenges.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">02 / ASSESS</div>
+            <h3>Explore</h3>
+            <p>We review the situation and identify the key priorities and options.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">03 / PLAN</div>
+            <h3>Recommend</h3>
+            <p>We outline practical next steps aligned with your objectives.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">04 / PROGRESS</div>
+            <h3>Support</h3>
+            <p>We help you move ahead with clarity and purposeful action.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <div class="cta-band"><div class="container"><div class="cta-inner"><div><h2>Let's talk about your next step.</h2><p>Tell us what you are working toward. We would be glad to hear from you.</p></div><a class="btn btn-primary" href="#contact">Get in Touch&nbsp; →</a></div></div></div>
+    <div class="cta-band">
+      <div class="container">
+        <div class="cta-inner">
+          <div>
+            <h2>Let's talk about your next step.</h2>
+            <p>Tell us what you are working toward. We would be glad to hear from you.</p>
+          </div>
+          <a class="btn btn-primary" href="#contact">Get in Touch&nbsp; →</a>
+        </div>
+      </div>
+    </div>
 
     <section class="contact" id="contact">
       <div class="container">
-        <div class="section-head"><div class="section-kicker">Contact us</div><h2>Start a conversation</h2><p>Share a little about your needs and the Emet Consultancy team can follow up with you.</p></div>
+        <div class="section-head">
+          <div class="section-kicker">Contact us</div>
+          <h2>Start a conversation</h2>
+          <p>
+            Share a little about your needs and the Emet Consultancy team
+            can follow up with you.
+          </p>
+        </div>
+
         <div class="contact-grid">
           <div class="contact-info">
-            <h3>We are here to help.</h3><p>For service inquiries, collaboration, or general questions, please reach out using the contact details you add below.</p>
-            <div class="contact-item"><div class="ci">✉</div><div><strong>Email</strong><span>Replace with your company email</span></div></div>
-            <div class="contact-item"><div class="ci">☎</div><div><strong>Phone</strong><span>Replace with your business phone number</span></div></div>
-            <div class="contact-item"><div class="ci">⌖</div><div><strong>Office</strong><span>Add your office address and city</span></div></div>
-            <p style="font-size:12px;margin-top:28px">Please update the placeholder contact information before publishing.</p>
+            <h3>We are here to help.</h3>
+            <p>
+              For service inquiries, collaboration, or general questions,
+              please reach out using the contact details you add below.
+            </p>
+
+            <div class="contact-item">
+              <div class="ci">✉</div>
+              <div>
+                <strong>Email</strong>
+                <span>Replace with your company email</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="ci">☎</div>
+              <div>
+                <strong>Phone</strong>
+                <span>Replace with your business phone number</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="ci">⌖</div>
+              <div>
+                <strong>Office</strong>
+                <span>Add your office address and city</span>
+              </div>
+            </div>
+
+            <p style="font-size:12px;margin-top:28px">
+              Please update the placeholder contact information before publishing.
+            </p>
           </div>
+
           <form class="contact-form" id="contactForm">
-            <div class="form-row"><div class="field"><label for="name">Your name *</label><input id="name" name="name" autocomplete="name" required placeholder="Full name"></div><div class="field"><label for="email">Email address *</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div></div>
-            <div class="field"><label for="service">Service of interest</label><select id="service" name="service"><option value="General inquiry">Choose a service (optional)</option><option>Business Consultancy</option><option>Business Planning</option><option>Management Support</option><option>Project Coordination</option><option>Research & Analysis</option><option>Tailored Consultancy</option></select></div>
-            <div class="field"><label for="message">How can we help? *</label><textarea id="message" name="message" required placeholder="Tell us briefly about your needs..."></textarea></div>
-            <button class="btn btn-primary" type="submit">Prepare Email Inquiry&nbsp; →</button>
-            <p class="form-help" id="formHelp">This demo form opens your email application. Add your real company email in the website code first.</p>
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Your name *</label>
+                <input id="name" name="name" autocomplete="name" required placeholder="Full name">
+              </div>
+
+              <div class="field">
+                <label for="email">Email address *</label>
+                <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="service">Service of interest</label>
+              <select id="service" name="service">
+                <option value="General inquiry">Choose a service (optional)</option>
+                <option>Business Consultancy</option>
+                <option>Business Planning</option>
+                <option>Management Support</option>
+                <option>Project Coordination</option>
+                <option>Research &amp; Analysis</option>
+                <option>Tailored Consultancy</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">How can we help? *</label>
+              <textarea id="message" name="message" required placeholder="Tell us briefly about your needs..."></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">
+              Prepare Email Inquiry&nbsp; →
+            </button>
+
+            <p class="form-help" id="formHelp">
+              This form opens your email application after the company email is configured.
+            </p>
           </form>
         </div>
       </div>
     </section>
   </main>
-  <footer><div class="container footer-row"><div><div class="footer-brand">Emet Consultancy Service Co.,Ltd.</div><div class="copyright">Professional consultancy for practical progress.</div></div><div class="footer-links"><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a></div><div class="copyright">© <span id="year"></span> Emet Consultancy. All rights reserved.</div></div></footer>
+
+  <footer>
+    <div class="container footer-row">
+      <div>
+        <div class="footer-brand">Emet Consultancy Service Co.,Ltd.</div>
+        <div class="copyright">Professional consultancy for practical progress.</div>
+      </div>
+
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="copyright">
+        © <span id="year"></span> Emet Consultancy. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
   <script>
     const menuBtn = document.getElementById('menuBtn');
     const navLinks = document.getElementById('navLinks');
+
     menuBtn.addEventListener('click', () => {
       const open = navLinks.classList.toggle('open');
       menuBtn.setAttribute('aria-expanded', String(open));
+      menuBtn.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
       menuBtn.textContent = open ? '×' : '☰';
     });
-    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      navLinks.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); menuBtn.textContent='☰';
-    }));
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.setAttribute('aria-label', 'Open navigation');
+        menuBtn.textContent = '☰';
+      });
+    });
+
     document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const companyEmail = 'YOUR-COMPANY-EMAIL@example.com'; // Replace with your real email address.
-      if (companyEmail === 'YOUR-COMPANY-EMAIL@example.com') {
-        document.getElementById('formHelp').textContent = 'Please edit index.html and replace YOUR-COMPANY-EMAIL@example.com with your real company email to enable inquiries.';
+
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      /* IMPORTANT: Replace this with your real company email address. */
+      const companyEmail = 'YOUR-COMPANY-EMAIL@example.com';
+
+      if (
+        !companyEmail ||
+        companyEmail === 'YOUR-COMPANY-EMAIL@example.com'
+      ) {
+        document.getElementById('formHelp').textContent =
+          'The contact form is not configured yet. Please add your real company email in the website code.';
         return;
       }
-      const d = new FormData(this);
-      const subject = encodeURIComponent('Website inquiry — ' + d.get('service'));
-      const body = encodeURIComponent('Name: ' + d.get('name') + '\nEmail: ' + d.get('email') + '\nService: ' + d.get('service') + '\n\nMessage:\n' + d.get('message'));
-      window.location.href = 'mailto:' + companyEmail + '?subject=' + subject + '&body=' + body;
+
+      const data = new FormData(this);
+
+      const subject = encodeURIComponent(
+        'Website inquiry — ' + data.get('service')
+      );
+
+      const body = encodeURIComponent(
+        'Name: ' + data.get('name') +
+        '\nEmail: ' + data.get('email') +
+        '\nService: ' + data.get('service') +
+        '\n\nMessage:\n' + data.get('message')
+      );
+
+      window.location.href =
+        'mailto:' + companyEmail +
+        '?subject=' + subject +
+        '&body=' + body;
     });
   </script>
 </body>
