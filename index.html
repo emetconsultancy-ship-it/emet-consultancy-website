@@ -1104,13 +1104,14 @@
     document.getElementById('contactForm').addEventListener('submit', function(event) {
       event.preventDefault();
 
-      /* IMPORTANT: Replace this with your real company email address. */
-      const companyEmail = 'YOUR-COMPANY-EMAIL@example.com';
+     /* Company contact email */
+const companyEmail = 'emetconsultancy@gmail.com';
 
-      if (
-        !companyEmail ||
-        companyEmail === 'YOUR-COMPANY-EMAIL@example.com'
-      ) {
+if (!companyEmail) {
+  document.getElementById('formHelp').textContent =
+    'The contact form is not configured yet. Please add your real company email in the website code.';
+  return;
+}
         document.getElementById('formHelp').textContent =
           'The contact form is not configured yet. Please add your real company email in the website code.';
         return;
