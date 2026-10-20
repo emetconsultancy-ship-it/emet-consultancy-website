@@ -1,487 +1,244 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Emet Consultancy Service Co.,Ltd. website
+       Main file: index.html
+       Keep the logo image "22 - Copy.jpg" in the same repository folder. -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Emet Consultancy Service Co.,Ltd. in Yangon, Myanmar provides student visa assistance, university admission application support, air ticket booking and purchase, and air cargo services.">
   <meta name="theme-color" content="#102b46">
-  <meta name="description" content="Emet Consultancy Service Co.,Ltd. offers student visa application assistance, university admissions support, air ticket booking and purchasing, and air cargo services in Yangon, Myanmar.">
-  <title>Emet Consultancy | Student Visas, Air Tickets &amp; Cargo</title>
+  <title>Emet Consultancy Service Co.,Ltd. | Study, Flights &amp; Cargo</title>
 
   <style>
+    /* ===== Brand colors and shared layout ===== */
     :root {
       --navy: #102b46;
-      --navy-dark: #091e31;
-      --gold: #e6b45c;
+      --navy-deep: #091d30;
+      --blue: #1c5278;
       --teal: #22a6a1;
-      --ink: #1c3042;
-      --muted: #647587;
+      --teal-dark: #168985;
+      --gold: #e6b45c;
+      --ink: #172b3b;
+      --muted: #657789;
       --pale: #f3f7fa;
-      --white: #ffffff;
+      --white: #fff;
       --line: #dce5ec;
-      --shadow: 0 14px 35px rgba(16, 43, 70, .10);
+      --shadow: 0 18px 45px rgba(16, 43, 70, .11);
     }
 
     * { box-sizing: border-box; }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
-    }
-
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.65;
       color: var(--ink);
       background: var(--white);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
     }
-
     a { color: inherit; text-decoration: none; }
-    button, input, textarea, select { font: inherit; }
-    .container { width: min(1120px, calc(100% - 36px)); margin: auto; }
-
-    /* Top information bar */
-    .topbar {
-      background: var(--navy-dark);
-      color: #d7e3ec;
-      padding: 8px 0;
+    button, input, select, textarea { font: inherit; }
+    img { max-width: 100%; }
+    .container { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    section { padding: 76px 0; }
+    .section-heading { max-width: 730px; margin-bottom: 34px; }
+    .kicker {
+      color: var(--teal-dark);
       font-size: 12px;
-    }
-
-    .topbar .container {
-      display: flex;
-      justify-content: space-between;
-      gap: 8px 20px;
-      flex-wrap: wrap;
-    }
-
-    /* Header and navigation */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(255,255,255,.97);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav {
-      min-height: 80px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      position: relative;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-width: 0;
-    }
-
-    .brand img {
-      width: 54px;
-      height: 54px;
-      object-fit: contain;
-      flex-shrink: 0;
-    }
-
-    .brand-name {
       font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .section-heading h2 {
+      margin: 10px 0 14px;
       color: var(--navy);
-      font-size: 14px;
-      line-height: 1.25;
+      font-size: clamp(29px, 3.7vw, 43px);
+      line-height: 1.15;
+      letter-spacing: -1px;
     }
-
-    .brand-name small {
-      display: block;
-      font-size: 10px;
-      letter-spacing: 1.5px;
-      color: var(--muted);
-      margin-top: 5px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 23px;
-      font-size: 14px;
-      font-weight: bold;
-    }
-
-    .nav-links a:hover { color: var(--teal); }
-
-    .menu-button {
-      display: none;
-      border: 0;
-      background: transparent;
-      color: var(--navy);
-      font-size: 28px;
-      cursor: pointer;
-    }
-
-    /* Buttons */
+    .section-heading p { margin: 0; color: var(--muted); }
     .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       padding: 12px 19px;
-      border-radius: 7px;
-      border: 0;
-      font-weight: bold;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      font-weight: 750;
       cursor: pointer;
-      transition: .2s ease;
+      transition: background .2s ease, transform .2s ease;
     }
-
-    .button-primary {
-      color: white;
-      background: var(--teal);
-    }
-
-    .button-primary:hover {
-      background: #168b87;
-      transform: translateY(-1px);
-    }
-
-    .button-outline {
-      border: 1px solid #ffffff80;
-      color: white;
-      background: transparent;
-    }
-
+    .button:hover { transform: translateY(-1px); }
+    .button-primary { background: var(--teal); color: var(--white); }
+    .button-primary:hover { background: var(--teal-dark); }
+    .button-outline { color: var(--white); border-color: #ffffff70; background: #ffffff0b; }
     .button-outline:hover { background: #ffffff18; }
 
-    /* Main hero section */
+    /* ===== Top information strip and navigation ===== */
+    .topbar { padding: 8px 0; background: var(--navy-deep); color: #d8e4ed; font-size: 12px; }
+    .topbar .container { display: flex; justify-content: space-between; gap: 8px 18px; flex-wrap: wrap; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255,255,255,.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #dce5ec;
+    }
+    .navigation { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 20px; position: relative; }
+    .brand { display: flex; align-items: center; gap: 11px; min-width: 0; }
+    .brand-logo { width: 53px; height: 53px; object-fit: contain; flex-shrink: 0; }
+    .brand-name { color: var(--navy); font-size: 14px; line-height: 1.25; font-weight: 850; }
+    .brand-name small { display: block; margin-top: 4px; color: var(--muted); font-size: 10px; letter-spacing: 1.5px; }
+    .nav-links { display: flex; align-items: center; gap: 22px; color: #40566a; font-size: 14px; font-weight: 700; }
+    .nav-links a:hover { color: var(--teal-dark); }
+    .menu-toggle { display: none; border: 0; background: transparent; color: var(--navy); font-size: 28px; cursor: pointer; }
+
+    /* ===== Hero / homepage first impression ===== */
     .hero {
-      color: white;
-      background: linear-gradient(120deg, #091e31, #123b5b 65%, #17616c);
-      padding: 82px 0;
+      position: relative;
       overflow: hidden;
+      padding: 84px 0;
+      color: var(--white);
+      background: linear-gradient(115deg, #0b2239 0%, #123b5b 60%, #17616c 100%);
     }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr .85fr;
-      align-items: center;
-      gap: 45px;
+    .hero::before, .hero::after {
+      position: absolute;
+      content: "";
+      border: 1px solid #ffffff20;
+      border-radius: 50%;
+      pointer-events: none;
     }
+    .hero::before { width: 580px; height: 580px; top: -235px; right: -100px; }
+    .hero::after { width: 390px; height: 390px; top: -140px; right: -5px; }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.2fr .8fr; gap: 50px; align-items: center; }
+    .hero .kicker { color: #8fe2dc; }
+    .hero h1 { max-width: 700px; margin: 18px 0 20px; font-size: clamp(39px, 5.4vw, 65px); line-height: 1.06; letter-spacing: -2px; }
+    .hero-copy { max-width: 650px; margin: 0 0 28px; color: #d5e2ec; font-size: 17px; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-note { display: flex; align-items: center; gap: 11px; margin-top: 25px; color: #d5e2ec; font-size: 13px; }
+    .gold-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 5px #e6b45c22; }
+    .hero-panel { padding: 28px; border: 1px solid #ffffff28; border-radius: 17px; background: #ffffff10; box-shadow: 0 24px 55px #06182a35; }
+    .hero-panel-label { color: #8fe2dc; font-size: 11px; font-weight: 850; letter-spacing: 1.8px; text-transform: uppercase; }
+    .hero-panel h2 { margin: 10px 0 18px; font-size: 25px; line-height: 1.25; }
+    .hero-feature { display: flex; gap: 13px; padding: 14px 0; border-top: 1px solid #ffffff20; }
+    .hero-feature-icon { display: grid; place-items: center; width: 38px; height: 38px; flex: 0 0 38px; border-radius: 10px; color: #8fe2dc; background: #ffffff12; font-size: 19px; }
+    .hero-feature strong { display: block; font-size: 14px; }
+    .hero-feature span { display: block; margin-top: 3px; color: #c4d4df; font-size: 12px; }
 
-    .eyebrow {
-      color: #8fe2dc;
-      font-size: 12px;
-      letter-spacing: 2px;
-      font-weight: bold;
-      text-transform: uppercase;
+    /* ===== About section ===== */
+    .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: 52px; }
+    .about-art {
+      min-height: 330px; padding: 27px; display: flex; align-items: flex-end;
+      position: relative; overflow: hidden; border-radius: 18px;
+      background: linear-gradient(145deg, #e8f2f4, #d2e6e7);
     }
-
-    h1 {
-      font-size: clamp(38px, 5vw, 62px);
-      line-height: 1.1;
-      letter-spacing: -1.5px;
-      margin: 17px 0;
+    .about-art::before {
+      content: ""; position: absolute; width: 280px; height: 280px; top: -80px; right: -60px;
+      border: 1px solid #1d527a30; border-radius: 50%;
+      box-shadow: 0 0 0 30px #1d527a08, 0 0 0 60px #1d527a06;
     }
-
-    .hero-copy {
-      color: #d5e2eb;
-      font-size: 17px;
-      max-width: 650px;
-      margin-bottom: 28px;
-    }
-
-    .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
-
-    .hero-note {
-      color: #d5e2eb;
-      font-size: 13px;
-      margin-top: 22px;
-    }
-
-    .hero-card {
-      padding: 28px;
-      background: #ffffff10;
-      border: 1px solid #ffffff30;
-      border-radius: 15px;
-    }
-
-    .hero-card h2 { margin: 9px 0 17px; font-size: 25px; }
-
-    .hero-item {
-      display: flex;
-      gap: 13px;
-      padding: 14px 0;
-      border-top: 1px solid #ffffff25;
-    }
-
-    .hero-icon {
-      display: grid;
-      place-items: center;
-      width: 40px;
-      height: 40px;
-      flex-shrink: 0;
-      border-radius: 9px;
-      background: #ffffff15;
-      font-size: 20px;
-    }
-
-    .hero-item strong { display: block; }
-    .hero-item small { display: block; color: #d1e0e9; margin-top: 3px; }
-
-    /* Common section headings */
-    section { padding: 74px 0; }
-
-    .section-heading {
-      max-width: 720px;
-      margin-bottom: 34px;
-    }
-
-    .section-label {
-      color: #168d89;
-      text-transform: uppercase;
-      font-size: 12px;
-      letter-spacing: 2px;
-      font-weight: bold;
-    }
-
-    .section-heading h2 {
-      color: var(--navy);
-      font-size: clamp(29px, 3.6vw, 42px);
-      line-height: 1.2;
-      margin: 10px 0 12px;
-    }
-
-    .section-heading p { color: var(--muted); margin: 0; }
-
-    /* About section */
-    .about-grid {
-      display: grid;
-      grid-template-columns: .85fr 1.15fr;
-      gap: 48px;
-      align-items: center;
-    }
-
-    .about-panel {
-      min-height: 310px;
-      padding: 28px;
-      border-radius: 15px;
-      background: linear-gradient(145deg, #e7f1f4, #d5e7e8);
-      display: flex;
-      align-items: flex-end;
-    }
-
-    .about-panel-inner {
-      background: white;
-      border-radius: 12px;
-      padding: 22px;
-      width: 100%;
-      box-shadow: var(--shadow);
-    }
-
-    .about-panel-inner strong {
-      display: block;
-      color: var(--navy);
-      font-size: 25px;
-      line-height: 1.3;
-    }
-
-    .about-panel-inner p { margin-bottom: 0; color: var(--muted); font-size: 13px; }
-    .about-copy h3 { font-size: 25px; color: var(--navy); line-height: 1.3; }
+    .about-art-card { position: relative; width: 100%; padding: 23px; border-radius: 13px; background: var(--white); box-shadow: var(--shadow); }
+    .about-art-card strong { display: block; color: var(--navy); font-size: 27px; line-height: 1.2; }
+    .about-art-card p { margin: 8px 0 0; color: var(--muted); font-size: 13px; }
+    .about-copy h3 { margin: 0 0 14px; color: var(--navy); font-size: 25px; line-height: 1.3; }
     .about-copy p { color: var(--muted); }
+    .check-list { display: grid; gap: 11px; padding: 0; margin: 21px 0 0; list-style: none; }
+    .check-list li { display: flex; gap: 10px; font-size: 14px; font-weight: 650; }
+    .check-mark { color: var(--teal-dark); font-weight: 900; }
 
-    .check-list { list-style: none; padding: 0; }
-    .check-list li { margin: 12px 0; font-weight: bold; font-size: 14px; }
-    .check-list span { color: var(--teal); margin-right: 9px; }
-
-    /* Services cards */
+    /* ===== Service cards ===== */
     .services { background: var(--pale); }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 19px; }
     .service-card {
-      padding: 26px 23px;
-      border-radius: 13px;
-      border: 1px solid #e3ebf0;
-      background: white;
-      transition: .2s ease;
+      padding: 25px 23px; border: 1px solid #e3ebf1; border-radius: 14px;
+      background: var(--white); transition: transform .2s, box-shadow .2s, border-color .2s;
     }
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: #c7e8e4; }
+    .service-icon { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 17px; border-radius: 12px; color: #147e7a; background: #e4f5f3; font-size: 23px; }
+    .service-card h3 { margin: 0 0 9px; color: var(--navy); font-size: 18px; line-height: 1.35; }
+    .service-card p { margin: 0; color: var(--muted); font-size: 14px; }
+    .service-card a { display: inline-block; margin-top: 17px; color: var(--teal-dark); font-size: 13px; font-weight: 800; }
 
-    .service-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow);
-      border-color: #bfe3e0;
-    }
+    /* ===== Service process ===== */
+    .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+    .step { padding-top: 19px; border-top: 2px solid var(--line); }
+    .step-number { color: var(--teal-dark); font-size: 12px; font-weight: 850; letter-spacing: 1.3px; }
+    .step h3 { margin: 9px 0 7px; color: var(--navy); font-size: 18px; }
+    .step p { margin: 0; color: var(--muted); font-size: 14px; }
 
-    .service-icon {
-      display: grid;
-      place-items: center;
-      width: 49px;
-      height: 49px;
-      border-radius: 11px;
-      background: #e4f5f3;
-      color: #147e7a;
-      font-size: 23px;
-      margin-bottom: 18px;
-    }
-
-    .service-card h3 { color: var(--navy); font-size: 18px; margin: 0 0 10px; }
-    .service-card p { color: var(--muted); font-size: 14px; margin: 0; }
-    .service-card a { display: inline-block; color: #138985; font-weight: bold; font-size: 13px; margin-top: 18px; }
-
-    /* Process section */
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 23px;
-    }
-
-    .step { border-top: 2px solid var(--line); padding-top: 18px; }
-    .step-number { color: var(--teal); font-size: 12px; font-weight: bold; letter-spacing: 1.5px; }
-    .step h3 { color: var(--navy); margin: 10px 0 7px; }
-    .step p { color: var(--muted); font-size: 14px; margin: 0; }
-
-    /* Call to action banner */
+    /* ===== Call to action ===== */
     .cta-section { padding-top: 0; }
-    .cta {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 22px;
-      padding: 38px;
-      border-radius: 16px;
-      color: white;
-      background: linear-gradient(110deg, var(--navy), #1b5b6c);
-    }
+    .cta-box { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 38px 42px; border-radius: 17px; color: var(--white); background: linear-gradient(110deg, var(--navy), #1b5b6c); }
+    .cta-box h2 { margin: 0 0 8px; font-size: clamp(25px, 3vw, 34px); line-height: 1.2; }
+    .cta-box p { margin: 0; color: #d0e1e9; }
+    .cta-box .button { flex-shrink: 0; }
 
-    .cta h2 { margin: 0 0 8px; line-height: 1.25; }
-    .cta p { margin: 0; color: #d1e0e9; }
-
-    /* Contact details and form */
+    /* ===== Contact information and inquiry form ===== */
     .contact { background: var(--pale); }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      gap: 48px;
-    }
-
-    .contact-info h3 { color: var(--navy); font-size: 24px; margin-top: 0; }
+    .contact-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; }
+    .contact-info h3 { margin: 0 0 10px; color: var(--navy); font-size: 25px; }
     .contact-info > p { color: var(--muted); }
-
-    .contact-item { display: flex; gap: 12px; margin-top: 22px; }
-    .contact-icon {
-      width: 40px;
-      height: 40px;
-      display: grid;
-      place-items: center;
-      flex-shrink: 0;
-      background: #e0f2f0;
-      color: #147e7a;
-      border-radius: 9px;
-    }
-
+    .contact-item { display: flex; gap: 12px; margin-top: 21px; }
+    .contact-icon { display: grid; place-items: center; width: 39px; height: 39px; flex: 0 0 39px; border-radius: 10px; color: #147e7a; background: #e0f2f0; }
     .contact-item strong { display: block; color: var(--navy); font-size: 14px; }
-    .contact-item span, .contact-item a { color: var(--muted); font-size: 14px; overflow-wrap: anywhere; }
-
-    .contact-form {
-      padding: 28px;
-      background: white;
-      border: 1px solid #e3ebf0;
-      border-radius: 14px;
-      box-shadow: 0 10px 28px #102b4608;
-    }
-
+    .contact-item a, .contact-item span { color: var(--muted); font-size: 14px; overflow-wrap: anywhere; }
+    .contact-form { padding: 28px; border: 1px solid #e4ebf0; border-radius: 15px; background: var(--white); box-shadow: 0 10px 30px #102b4608; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
     .field { margin-bottom: 16px; }
-
-    .field label {
-      display: block;
-      color: var(--navy);
-      font-size: 13px;
-      font-weight: bold;
-      margin-bottom: 6px;
-    }
-
+    .field label { display: block; margin-bottom: 6px; color: var(--navy); font-size: 13px; font-weight: 750; }
     .field input, .field select, .field textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #d9e3e9;
-      border-radius: 7px;
-      background: white;
-      color: var(--ink);
+      width: 100%; padding: 12px 13px; border: 1px solid #d9e3e9; border-radius: 8px;
+      outline: none; color: var(--ink); background: var(--white);
     }
-
-    .field input:focus, .field select:focus, .field textarea:focus {
-      outline: 2px solid #22a6a130;
-      border-color: var(--teal);
-    }
-
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--teal); box-shadow: 0 0 0 3px #22a6a11b; }
     .field textarea { min-height: 120px; resize: vertical; }
-    .form-help { color: var(--muted); font-size: 12px; margin-bottom: 0; }
+    .form-note { margin: 11px 0 0; color: var(--muted); font-size: 12px; }
 
-    /* Footer */
-    footer { background: var(--navy-dark); color: #b7c7d4; padding: 28px 0; }
-
-    .footer-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
-
-    .footer-brand { color: white; font-weight: bold; }
+    /* ===== Footer ===== */
+    footer { padding: 29px 0; color: #b7c7d4; background: var(--navy-deep); }
+    .footer-row { display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .footer-brand { color: var(--white); font-weight: 850; }
     .footer-links { display: flex; gap: 18px; font-size: 13px; }
-    .copyright { font-size: 12px; color: #8ea3b4; }
+    .copyright { color: #8ea3b4; font-size: 12px; }
 
-    /* Tablet layout */
+    /* ===== Tablet and mobile layout ===== */
     @media (max-width: 850px) {
-      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
-      .hero-grid { gap: 30px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 34px; }
+      .hero-panel { max-width: 650px; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 30px; }
       .service-grid { grid-template-columns: repeat(2, 1fr); }
-      .steps { grid-template-columns: repeat(2, 1fr); }
+      .steps-grid { grid-template-columns: repeat(2, 1fr); }
+      .nav-links { gap: 13px; }
+      .cta-box { align-items: flex-start; flex-direction: column; }
     }
-
-    /* Mobile layout and collapsible navigation */
     @media (max-width: 650px) {
       .container { width: calc(100% - 30px); }
       .topbar .container { justify-content: center; text-align: center; }
-      .nav { min-height: 70px; }
-      .brand img { width: 45px; height: 45px; }
+      .navigation { min-height: 70px; }
+      .brand-logo { width: 44px; height: 44px; }
       .brand-name { font-size: 12px; }
-      .brand-name small { font-size: 9px; }
-      .menu-button { display: block; }
-
+      .brand-name small { font-size: 9px; letter-spacing: 1px; }
+      .menu-toggle { display: block; }
       .nav-links {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        padding: 16px 20px 22px;
-        background: white;
+        display: none; position: absolute; top: 70px; left: 0; right: 0; padding: 14px 20px 22px;
+        flex-direction: column; align-items: stretch; gap: 0; background: var(--white);
         border-bottom: 1px solid var(--line);
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
       }
-
       .nav-links.open { display: flex; }
-      .nav-links a { padding: 11px 0; border-bottom: 1px solid #edf1f4; }
+      .nav-links a { padding: 12px 0; border-bottom: 1px solid #edf1f4; }
       .nav-links .button { margin-top: 12px; }
       .hero { padding: 60px 0; }
+      .hero h1 { letter-spacing: -1.3px; }
       .hero-copy { font-size: 16px; }
       section { padding: 58px 0; }
-      .service-grid, .steps, .form-row { grid-template-columns: 1fr; }
-      .about-panel { min-height: 260px; padding: 20px; }
-      .cta { padding: 25px 22px; align-items: flex-start; flex-direction: column; }
+      .service-grid, .steps-grid, .form-row { grid-template-columns: 1fr; }
+      .about-art { min-height: 270px; padding: 20px; }
+      .cta-section { padding-top: 0; }
+      .cta-box { padding: 27px 22px; }
       .contact-form { padding: 21px; }
       .footer-row { align-items: flex-start; flex-direction: column; }
     }
-
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition-duration: .01ms !important; }
@@ -490,155 +247,140 @@
 </head>
 
 <body>
-  <!-- Small information bar at the top of the page -->
+  <!-- Small information strip above the main navigation -->
   <div class="topbar">
     <div class="container">
-      <span>Education, travel and air cargo assistance</span>
+      <span>Education · Air Ticket Booking · Air Cargo</span>
       <span>Yangon, Myanmar</span>
     </div>
   </div>
 
-  <!-- Company logo and navigation -->
+  <!-- Header and navigation -->
   <header>
-    <div class="container nav">
+    <div class="container navigation">
       <a class="brand" href="#home" aria-label="Emet Consultancy home">
-        <!-- Keep 22 - Copy.jpg in the same repository folder as this file. -->
-        <img src="22%20-%20Copy.jpg" alt="Emet Consultancy logo">
-        <span class="brand-name">
-          EMET CONSULTANCY
-          <small>SERVICE CO.,LTD.</small>
-        </span>
+        <img class="brand-logo" src="22%20-%20Copy.jpg" alt="Emet Consultancy Service Co.,Ltd. logo">
+        <span class="brand-name">EMET CONSULTANCY<small>SERVICE CO.,LTD.</small></span>
       </a>
-
-      <button class="menu-button" id="menuButton" type="button"
-        aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
-
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
       <nav class="nav-links" id="navLinks" aria-label="Main navigation">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#approach">Our Approach</a>
-        <a href="#contact" class="button button-primary">Contact Us</a>
+        <a class="button button-primary" href="#contact">Contact Us</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- HERO: primary headline and overview -->
+    <!-- Main homepage introduction -->
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Your journey starts here</div>
+          <div class="kicker">Your journey starts here</div>
           <h1>Study Abroad.<br>Travel with Confidence.</h1>
           <p class="hero-copy">
-            Emet Consultancy Service Co.,Ltd. assists with student visa
-            applications, university admissions, air ticket booking and
-            purchasing, and air cargo services. Tell us about your plans
-            and let us help you explore the next steps.
+            Emet Consultancy Service Co.,Ltd. supports student visa applications,
+            university admissions, air ticket booking and purchasing, and air cargo.
+            Tell us what you need and our team can help you discuss the next steps.
           </p>
-          <div class="hero-buttons">
-            <a class="button button-primary" href="#contact">Talk to Our Team →</a>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contact">Talk to Our Team&nbsp; →</a>
             <a class="button button-outline" href="#services">Explore Our Services</a>
           </div>
-          <div class="hero-note">✓ Clear communication · Practical assistance · Personal service</div>
+          <div class="hero-note"><span class="gold-dot"></span>Practical support for education, flights and cargo</div>
         </div>
 
-        <aside class="hero-card" aria-label="Featured services">
-          <div class="eyebrow">How we can help</div>
+        <aside class="hero-panel" aria-label="Our key services">
+          <div class="hero-panel-label">How we can help</div>
           <h2>Support for your next destination.</h2>
-
-          <div class="hero-item">
-            <div class="hero-icon" aria-hidden="true">🎓</div>
-            <div><strong>Study opportunities</strong><small>University admission and student visa assistance.</small></div>
+          <div class="hero-feature">
+            <span class="hero-feature-icon" aria-hidden="true">🎓</span>
+            <div><strong>Study opportunities</strong><span>University application and student visa assistance.</span></div>
           </div>
-
-          <div class="hero-item">
-            <div class="hero-icon" aria-hidden="true">✈</div>
-            <div><strong>Air ticket booking</strong><small>Flight searches, reservations and ticket purchasing assistance.</small></div>
+          <div class="hero-feature">
+            <span class="hero-feature-icon" aria-hidden="true">✈</span>
+            <div><strong>Air ticket booking &amp; purchase</strong><span>Flight inquiries, reservations and ticket purchasing assistance.</span></div>
           </div>
-
-          <div class="hero-item">
-            <div class="hero-icon" aria-hidden="true">▣</div>
-            <div><strong>Air cargo</strong><small>Inquiries and arrangements for shipments by air.</small></div>
+          <div class="hero-feature">
+            <span class="hero-feature-icon" aria-hidden="true">▣</span>
+            <div><strong>Air cargo</strong><span>Enquiries about air shipping and cargo arrangements.</span></div>
           </div>
         </aside>
       </div>
     </section>
 
-    <!-- ABOUT: company introduction -->
+    <!-- Company overview -->
     <section id="about">
       <div class="container about-grid">
-        <div class="about-panel">
-          <div class="about-panel-inner">
+        <div class="about-art">
+          <div class="about-art-card">
             <strong>Your plans.<br>Our support.</strong>
-            <p>Education, air travel and cargo assistance from one point of contact.</p>
+            <p>One point of contact for education, travel and cargo inquiries.</p>
           </div>
         </div>
-
         <div class="about-copy">
-          <div class="section-label">About Emet Consultancy</div>
-          <h3>Helping you navigate education and travel arrangements.</h3>
+          <div class="kicker">About Emet Consultancy</div>
+          <h3>Helping you navigate study, travel and shipping arrangements.</h3>
           <p>
-            Whether you are planning to study overseas, apply to a university,
-            purchase a flight ticket or arrange air cargo, our team can discuss
-            your needs and explain the relevant next steps.
+            Planning to study overseas, arrange a flight, or send goods by air?
+            Emet Consultancy Service Co.,Ltd. can discuss your needs, explain relevant
+            preparation steps and assist with inquiries about our services.
           </p>
-          <p>
-            We aim to provide clear communication, helpful guidance and
-            responsive service tailored to your inquiry.
-          </p>
+          <p>We value clear communication, responsive service and practical assistance.</p>
           <ul class="check-list">
-            <li><span>✓</span> Student visa application assistance</li>
-            <li><span>✓</span> University admission application support</li>
-            <li><span>✓</span> Air ticket booking and purchasing assistance</li>
-            <li><span>✓</span> Air cargo inquiries and arrangements</li>
+            <li><span class="check-mark">✓</span><span>Student visa application assistance</span></li>
+            <li><span class="check-mark">✓</span><span>University admission application support</span></li>
+            <li><span class="check-mark">✓</span><span>Air ticket booking and ticket purchase inquiries</span></li>
+            <li><span class="check-mark">✓</span><span>Air cargo service inquiries and related support</span></li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- SERVICES: individual service descriptions -->
+    <!-- Main services -->
     <section class="services" id="services">
       <div class="container">
         <div class="section-heading">
-          <div class="section-label">Our services</div>
-          <h2>Education, flights and cargo—made easier to arrange.</h2>
-          <p>Choose a service below and contact us to discuss your specific requirements.</p>
+          <div class="kicker">What we do</div>
+          <h2>Services for study, flights and cargo</h2>
+          <p>Choose a service and contact our team to discuss your destination, dates or requirements.</p>
         </div>
 
         <div class="service-grid">
           <article class="service-card">
             <div class="service-icon" aria-hidden="true">✦</div>
-            <h3>Student Visa Assistance</h3>
+            <h3>Student Visa Application Assistance</h3>
             <p>Guidance on student visa application steps, document preparation and understanding the process for your intended destination. Visa decisions remain with the relevant authorities.</p>
             <a href="#contact">Ask about student visas →</a>
           </article>
 
           <article class="service-card">
             <div class="service-icon" aria-hidden="true">🎓</div>
-            <h3>University Admissions</h3>
-            <p>Assistance with university application steps, required information and organizing documents for your intended course or institution.</p>
+            <h3>University Admission Applications</h3>
+            <p>Support with university application steps, required information and organizing documents for your intended course or institution.</p>
             <a href="#contact">Ask about admissions →</a>
           </article>
 
           <article class="service-card">
             <div class="service-icon" aria-hidden="true">✈</div>
             <h3>Air Ticket Booking &amp; Purchase</h3>
-            <p>Assistance searching for flights, checking available options, making ticket reservations and arranging ticket purchases. Availability and fares must be confirmed at the time of booking.</p>
-            <a href="#contact">Ask about air tickets →</a>
+            <p>Ask us about flight options, ticket reservations and purchasing tickets. Share your departure city, destination, travel dates and number of passengers so we can discuss suitable options.</p>
+            <a href="#contact">Enquire about flights →</a>
           </article>
 
           <article class="service-card">
             <div class="service-icon" aria-hidden="true">▣</div>
             <h3>Air Cargo Services</h3>
-            <p>Enquire about shipping goods by air, including shipment details, destination information and the next steps for arranging transport.</p>
-            <a href="#contact">Ask about air cargo →</a>
+            <p>Contact us about sending cargo by air. Include your shipment description, approximate weight, origin and destination to help us understand your inquiry.</p>
+            <a href="#contact">Enquire about air cargo →</a>
           </article>
 
           <article class="service-card">
             <div class="service-icon" aria-hidden="true">◎</div>
             <h3>Education &amp; Travel Guidance</h3>
-            <p>Discuss your education or travel plans and ask which preparation steps and services may be relevant to your situation.</p>
+            <p>Discuss your education or travel plans with our team to understand which preparation steps and services may be relevant.</p>
             <a href="#contact">Discuss your plans →</a>
           </article>
 
@@ -652,73 +394,50 @@
       </div>
     </section>
 
-    <!-- APPROACH: how inquiries are handled -->
+    <!-- What customers can expect after contacting the company -->
     <section id="approach">
       <div class="container">
         <div class="section-heading">
-          <div class="section-label">Our approach</div>
+          <div class="kicker">Our approach</div>
           <h2>Clear steps. Helpful support.</h2>
-          <p>We aim to help you understand your options and the information you may need to prepare.</p>
+          <p>We aim to help you understand your options and identify the information needed for your inquiry.</p>
         </div>
-
-        <div class="steps">
-          <div class="step">
-            <div class="step-number">01 / CONTACT</div>
-            <h3>Tell us your plan</h3>
-            <p>Let us know if you need visa, admission, ticketing or cargo assistance.</p>
-          </div>
-          <div class="step">
-            <div class="step-number">02 / REVIEW</div>
-            <h3>Discuss requirements</h3>
-            <p>We review the details you provide and discuss your inquiry.</p>
-          </div>
-          <div class="step">
-            <div class="step-number">03 / PREPARE</div>
-            <h3>Understand next steps</h3>
-            <p>We explain the information and preparation steps relevant to your request.</p>
-          </div>
-          <div class="step">
-            <div class="step-number">04 / FOLLOW UP</div>
-            <h3>Stay in touch</h3>
-            <p>Contact us with questions or to follow up on your inquiry.</p>
-          </div>
+        <div class="steps-grid">
+          <div class="step"><div class="step-number">01 / CONTACT</div><h3>Tell us your plan</h3><p>Tell us if you need visa, admission, flight booking or cargo assistance.</p></div>
+          <div class="step"><div class="step-number">02 / REVIEW</div><h3>Discuss requirements</h3><p>Share the destination, dates and other details relevant to your request.</p></div>
+          <div class="step"><div class="step-number">03 / OPTIONS</div><h3>Review next steps</h3><p>We can discuss relevant preparation and available service options.</p></div>
+          <div class="step"><div class="step-number">04 / FOLLOW UP</div><h3>Stay in touch</h3><p>Follow up with our team about your inquiry and agreed next steps.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- Contact call-to-action -->
+    <!-- Contact callout -->
     <section class="cta-section">
       <div class="container">
-        <div class="cta">
-          <div>
-            <h2>Ready to discuss your plans?</h2>
-            <p>Tell us what you need help with and our team can follow up.</p>
-          </div>
-          <a class="button button-primary" href="#contact">Contact Emet →</a>
+        <div class="cta-box">
+          <div><h2>Ready to discuss your plans?</h2><p>Tell us what you need help with and our team can follow up.</p></div>
+          <a class="button button-primary" href="#contact">Contact Emet&nbsp; →</a>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT: company details and inquiry form -->
+    <!-- Contact details and inquiry form -->
     <section class="contact" id="contact">
       <div class="container">
         <div class="section-heading">
-          <div class="section-label">Contact us</div>
+          <div class="kicker">Contact us</div>
           <h2>Start a conversation</h2>
-          <p>Contact us about student visas, university applications, air ticket booking and purchasing, air cargo or related services.</p>
+          <p>Send us your questions about student visas, university admissions, flight tickets or air cargo.</p>
         </div>
 
         <div class="contact-grid">
           <div class="contact-info">
             <h3>We are here to help.</h3>
-            <p>Reach Emet Consultancy Service Co.,Ltd. using the contact details below.</p>
+            <p>Contact Emet Consultancy Service Co.,Ltd. using the details below.</p>
 
             <div class="contact-item">
               <div class="contact-icon" aria-hidden="true">✉</div>
-              <div>
-                <strong>Email</strong>
-                <a href="mailto:emetconsultancy@gmail.com">emetconsultancy@gmail.com</a>
-              </div>
+              <div><strong>Email</strong><a href="mailto:emetconsultancy@gmail.com">emetconsultancy@gmail.com</a></div>
             </div>
 
             <div class="contact-item">
@@ -733,14 +452,11 @@
 
             <div class="contact-item">
               <div class="contact-icon" aria-hidden="true">⌖</div>
-              <div>
-                <strong>Office</strong>
-                <span>No. 1133/4 Quarter, Ah Myo Thar Street, East Dagon, Yangon, Myanmar</span>
-              </div>
+              <div><strong>Office</strong><span>No. 1133/4 Quarter, Ah Myo Thar Street, East Dagon, Yangon, Myanmar</span></div>
             </div>
           </div>
 
-          <!-- This form opens an email draft; it does not send email automatically. -->
+          <!-- The form prepares an email draft; it does not send it automatically. -->
           <form class="contact-form" id="contactForm">
             <div class="form-row">
               <div class="field">
@@ -754,10 +470,10 @@
             </div>
 
             <div class="field">
-              <label for="service">Service of interest</label>
-              <select id="service" name="service">
-                <option value="">Choose a service (optional)</option>
-                <option>Student Visa Assistance</option>
+              <label for="service">Service of interest *</label>
+              <select id="service" name="service" required>
+                <option value="">Choose a service</option>
+                <option>Student Visa Application Assistance</option>
                 <option>University Admission Applications</option>
                 <option>Air Ticket Booking &amp; Purchase</option>
                 <option>Air Cargo Services</option>
@@ -767,81 +483,77 @@
             </div>
 
             <div class="field">
-              <label for="message">How can we help? *</label>
-              <textarea id="message" name="message" required placeholder="For flights, include your destination and preferred travel dates. For study or cargo inquiries, please share the relevant details."></textarea>
+              <label for="travelDetails">Travel details (optional)</label>
+              <input id="travelDetails" name="travelDetails" type="text" placeholder="For flights: from, to, dates, passengers">
             </div>
 
-            <button class="button button-primary" type="submit">Prepare Email Inquiry →</button>
-            <p class="form-help">This form opens your email application with a prepared message. Review it and press Send in your email application.</p>
+            <div class="field">
+              <label for="message">How can we help? *</label>
+              <textarea id="message" name="message" required placeholder="Please describe your question or requirements."></textarea>
+            </div>
+
+            <button class="button button-primary" type="submit">Prepare Email Inquiry&nbsp; →</button>
+            <p class="form-note">This opens your email application with a prepared message. Please review and send it from your email application. Flight reservations and ticket purchases require confirmation through the company's booking process.</p>
           </form>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer links and copyright -->
+  <!-- Footer -->
   <footer>
     <div class="container footer-row">
-      <div>
-        <div class="footer-brand">Emet Consultancy Service Co.,Ltd.</div>
-        <div class="copyright">Student visas · University admissions · Air tickets · Air cargo</div>
-      </div>
-
-      <nav class="footer-links" aria-label="Footer navigation">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
+      <div><div class="footer-brand">Emet Consultancy Service Co.,Ltd.</div><div class="copyright">Education, travel and cargo support.</div></div>
+      <nav class="footer-links" aria-label="Footer navigation"><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
       <div class="copyright">© <span id="year"></span> Emet Consultancy. All rights reserved.</div>
     </div>
   </footer>
 
   <script>
-    // Mobile navigation: show or hide the menu when the button is clicked.
-    const menuButton = document.getElementById("menuButton");
+    // Mobile navigation: toggle the menu open or closed on small screens.
+    const menuToggle = document.getElementById("menuToggle");
     const navLinks = document.getElementById("navLinks");
 
-    menuButton.addEventListener("click", function () {
+    menuToggle.addEventListener("click", function () {
       const isOpen = navLinks.classList.toggle("open");
-      menuButton.setAttribute("aria-expanded", String(isOpen));
-      menuButton.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
-      menuButton.textContent = isOpen ? "×" : "☰";
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+      menuToggle.textContent = isOpen ? "×" : "☰";
     });
 
-    // Close the mobile menu after the visitor selects a link.
+    // Close the mobile navigation after a link is selected.
     navLinks.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
         navLinks.classList.remove("open");
-        menuButton.setAttribute("aria-expanded", "false");
-        menuButton.setAttribute("aria-label", "Open navigation");
-        menuButton.textContent = "☰";
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+        menuToggle.textContent = "☰";
       });
     });
 
-    // Automatically display the current year in the footer.
+    // Display the current year in the footer.
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Prepare a message in the visitor's email app when the form is submitted.
-    // This is not a server-side form and cannot send email by itself.
+    // Prepare an email draft for the visitor. This does not send email directly.
     document.getElementById("contactForm").addEventListener("submit", function (event) {
       event.preventDefault();
 
       const name = document.getElementById("name").value.trim();
       const email = document.getElementById("email").value.trim();
-      const service = document.getElementById("service").value || "Not specified";
+      const service = document.getElementById("service").value;
+      const travelDetails = document.getElementById("travelDetails").value.trim();
       const message = document.getElementById("message").value.trim();
 
       const subject = encodeURIComponent("Website inquiry - " + service);
       const body = encodeURIComponent(
         "Name: " + name + "\n" +
         "Email: " + email + "\n" +
-        "Service of interest: " + service + "\n\n" +
+        "Service of interest: " + service + "\n" +
+        "Travel details: " + (travelDetails || "Not provided") + "\n\n" +
         "Message:\n" + message
       );
 
-      window.location.href =
-        "mailto:emetconsultancy@gmail.com?subject=" + subject + "&body=" + body;
+      window.location.href = "mailto:emetconsultancy@gmail.com?subject=" + subject + "&body=" + body;
     });
   </script>
 </body>
