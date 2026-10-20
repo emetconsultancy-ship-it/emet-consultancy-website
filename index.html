@@ -81,30 +81,16 @@
       min-width: 0;
     }
 
-    /* Company logo: fixed size on desktop and mobile */
+    /* Full company logo lockup */
     .brand-logo {
       display: block;
-      width: 54px;
-      height: 54px;
+      width: 150px;
+      height: 78px;
       object-fit: contain;
       flex-shrink: 0;
     }
 
-    .brandname {
-      font-weight: 800;
-      line-height: 1.2;
-      color: var(--navy);
-      font-size: 15px;
-    }
-
-    .brandname small {
-      display: block;
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--muted);
-      letter-spacing: 1.6px;
-      margin-top: 5px;
-    }
+    .brandname { display: none; }
 
     .navlinks {
       display: flex;
@@ -345,7 +331,7 @@
     .about-visual {
       min-height: 355px;
       border-radius: 18px;
-      background: linear-gradient(145deg, #e7f1f4, #d5e7e8);
+      background: linear-gradient(0deg, rgba(7,29,52,.24), rgba(7,29,52,.02)), url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85") center/cover no-repeat;
       position: relative;
       overflow: hidden;
       padding: 32px;
@@ -358,7 +344,7 @@
       position: absolute;
       width: 290px;
       height: 290px;
-      border: 1px solid #1d527a25;
+      border: 1px solid #ffffff40;
       border-radius: 50%;
       top: -85px;
       right: -65px;
@@ -685,14 +671,9 @@
 
       .nav { min-height: 70px; }
 
-      /* Keep the logo readable on small screens */
-      .brand { gap: 9px; }
-      .brand-logo { width: 44px; height: 44px; }
-      .brandname { font-size: 13px; }
-      .brandname small {
-        font-size: 9px;
-        letter-spacing: 1.2px;
-      }
+      /* Keep the full logo visible on small screens */
+      .brand { gap: 6px; }
+      .brand-logo { width: 112px; height: 62px; }
 
       .menu-btn { display: block; }
 
@@ -763,7 +744,7 @@
       <a class="brand" href="#home" aria-label="Emet Consultancy home">
         <img
           class="brand-logo"
-          src="22%20-%20Copy.jpg"
+          src="./emet-new-logo.png"
           alt="Emet Consultancy Service Co.,Ltd. logo"
         >
         <span class="brandname">
