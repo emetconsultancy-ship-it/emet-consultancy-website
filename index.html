@@ -606,7 +606,7 @@
       box-shadow: 0 0 0 3px #22a6a11b;
     }
 
-    .field textarea { min-height: 120px; resize: vertical; }
+    .field textarea { display: block; width: 100%; min-height: 140px; resize: vertical; color: var(--ink); background: #fff; border: 1px solid #d9e3e9; }
 
     .form-help {
       font-size: 12px;
@@ -982,37 +982,38 @@
         <div class="contact-grid">
           <div class="contact-info">
             <h3>We are here to help.</h3>
-            
-<p>
-  For service inquiries, collaboration, or general questions,
-  please reach out using the contact details below.
-</p>
+            <p>
+              For service inquiries, collaboration, or general questions,
+              please reach out using the contact details below.
+            </p>
 
-<div class="contact-item">
-  <div class="ci">✉</div>
-  <div>
-    <strong>Email</strong>
-    <span>emetconsultancy@gmail.com</span>
-  </div>
-</div>
-    <strong>Phone</strong>
-    <span>
-      +95 9 260 224 190<br>
-      +95 9 400 503 511<br>
-      +95 9 257 263 206
-    </span>
-  </div>
-</div>
+            <div class="contact-item">
+              <div class="ci">✉</div>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:emetconsultancy@gmail.com">emetconsultancy@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="ci">☎</div>
+              <div>
+                <strong>Phone</strong>
+                <span>
+                  <a href="tel:+959260224190">+95 9 260 224 190</a><br>
+                  <a href="tel:+959400503511">+95 9 400 503 511</a><br>
+                  <a href="tel:+959257263206">+95 9 257 263 206</a>
+                </span>
+              </div>
+            </div>
 
             <div class="contact-item">
               <div class="ci">⌖</div>
               <div>
                 <strong>Office</strong>
-                <span> <span>No. 1133/4 Quarter, Ah Myo Thar Street, East Dagon, Yangon, Myanmar</span></span>
+                <span>No. 1133/4 Quarter, Ah Myo Thar Street, East Dagon, Yangon, Myanmar</span>
               </div>
             </div>
-
-           
           </div>
 
           <form class="contact-form" id="contactForm">
@@ -1110,31 +1111,22 @@
     document.getElementById('contactForm').addEventListener('submit', function(event) {
       event.preventDefault();
 
-     /* Company contact email */
-const companyEmail = 'emetconsultancy@gmail.com';
-
-if (!companyEmail) {
-  document.getElementById('formHelp').textContent =
-    'The contact form is not configured yet. Please add your real company email in the website code.';
-  return;
-}
-        document.getElementById('formHelp').textContent =
-          'The contact form is not configured yet. Please add your real company email in the website code.';
-        return;
-      }
-
+      const companyEmail = 'emetconsultancy@gmail.com';
       const data = new FormData(this);
 
       const subject = encodeURIComponent(
-        'Website inquiry — ' + data.get('service')
+        'Website inquiry — ' + (data.get('service') || 'General inquiry')
       );
 
       const body = encodeURIComponent(
         'Name: ' + data.get('name') +
-        '\nEmail: ' + data.get('email') +
-        '\nService: ' + data.get('service') +
-        '\n\nMessage:\n' + data.get('message')
+        '\\nEmail: ' + data.get('email') +
+        '\\nService: ' + (data.get('service') || 'General inquiry') +
+        '\\n\\nMessage:\\n' + data.get('message')
       );
+
+      document.getElementById('formHelp').textContent =
+        'Opening your email application. Please review the message and press Send in your email application.';
 
       window.location.href =
         'mailto:' + companyEmail +
