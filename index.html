@@ -811,66 +811,8 @@
       },
 
       hakha: {
-        navHome: "Inn Lam",
-        navAbout: "Kan Chungchang",
-        navServices: "Kan Rawngbawlhnak",
-        navApproach: "Kan Tuahdan",
-        navContact: "Kan Biak",
-        heroEyebrow: "Na rinsan tlak rawngbawlhnak",
-        heroTitle: "Na Khualtlawnnak ah Kan Bawmh",
-        heroText: "Sami visa dilnak, university lutnak, vanzam ticket le vanzam cargo kongah kan bawmh.",
-        heroButton: "Kan Biak",
-        aboutTitle: "Emet Consultancy Chungchang",
-        aboutText: "Emet Consultancy Services Co.,Ltd. nih sianginn tlawngmi le khualtlawngtu pawl cu an herhmi kaihhruainak le rawngbawlhnak a pek. Sami visa dilnak, university lutnak, vanzam ticket le vanzam cargo kongah kan bawmh.",
-        aboutText2: "Kan tumtahmi cu kan customer pawl caah a fiang deuh le a awlsam deuh dingin bawmh hi a si.",
-        servicesTitle: "Kan Rawngbawlhnak",
-        servicesIntro: "Zohchunhnak, khualtlawnnak le cargo herhnak pawl caah bawmhnak.",
-        service1Title: "Sami Visa Dilnak",
-        service1Text: "Sami visa dilnak caah ca pawl le dilnak timhtuahnak ah kan bawmh.",
-        service2Title: "University Lutnak",
-        service2Text: "University dilnak, ca timhtuahnak le lutnak herhmi pawl ah kan bawmh.",
-        service3Title: "Vanzam Ticket Rawngbawlhnak",
-        service3Text: "Vanzam ticket truyawn, booking le khualtlawnnak timhtuahnak ah kan bawmh.",
-        service4Title: "Vanzam Cargo Rawngbawlhnak",
-        service4Text: "Vanzam cargo truyawn le thil kuatnak timhtuahnak ah kan bawmh.",
-        service5Title: "Ca Pawl Timhtuahnak",
-        service5Text: "Dilnak le a dangmi rawngbawlhnak caah ca pawl timhtuahnak ah kan bawmh.",
-        service6Title: "A Dangmi Rawngbawlhnak",
-        service6Text: "Na herhmi a dangmi rawngbawlhnak kongah kan biak khawh.",
-        approachTitle: "Kan Tuahdan",
-        approachIntro: "Kan tuahmi cu a fiang, a awlsam le bawmhnak a ngeihmi dingah kan i zuam.",
-        approach1Title: "1. Theihthiam",
-        approach1Text: "Na herhnak kan ngaihthlak i a hnuai ah tuah dingmi kan bawmh.",
-        approach2Title: "2. Timhtuah",
-        approach2Text: "Herhmi ca pawl le timhtuahnak kongah kan bawmh.",
-        approach3Title: "3. Bawmhnak",
-        approach3Text: "Kan pekmi rawngbawlhnak pawl ah kaihhruainak kan pek.",
-        contactTitle: "Kan Biak",
-        contactIntro: "Kan rawngbawlhnak pawl kongah theihhngalhnak caah Emet Consultancy kan biak.",
-        contactDetails: "Biaknak Kong",
-        emailLabel: "Email:",
-        phoneLabel: "Phone:",
-        addressLabel: "Office Address:",
-        formTitle: "Halnak Kuat",
-        formIntro: "A hnuai form hi fill in. * biami pawl cu fill a herh.",
-        nameLabel: "Na Min *",
-        namePlaceholder: "Na min ngan",
-        formEmailLabel: "Na Email *",
-        emailPlaceholder: "Na email address ngan",
-        formPhoneLabel: "Phone Number",
-        phonePlaceholder: "Na phone number ngan",
-        serviceLabel: "Na Herhmi Rawngbawlhnak *",
-        chooseService: "Rawngbawlhnak hril",
-        optionVisa: "Sami Visa Dilnak",
-        optionAdmission: "University Lutnak",
-        optionTickets: "Vanzam Ticket Rawngbawlhnak",
-        optionCargo: "Vanzam Cargo Rawngbawlhnak",
-        optionOther: "A Dangmi Rawngbawlhnak",
-        messageLabel: "Na Thuchah *",
-        messagePlaceholder: "Zeidah kan bawmh khawh ti ngan",
-        requiredNote: "* Fill a herhmi pawl",
-        submitButton: "Thuchah Kuat",
-        footerText: "A dihmi diknak pawl kan ngei."
+        // Hakha Chin (Lai) translations should be added after review by a fluent speaker.
+        // Until then, missing entries safely fall back to English.
       }
     };
 
@@ -883,7 +825,7 @@
         ...translations[selected]
       };
 
-      document.documentElement.lang = selected === "hakha" ? "cnh" : selected;
+      document.documentElement.lang = selected;
 
       document.querySelectorAll("[data-i18n]").forEach(function (element) {
         const key = element.getAttribute("data-i18n");
